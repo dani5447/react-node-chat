@@ -5,7 +5,7 @@ import browserify from 'browserify';
 import babelify from 'babelify';
 import source from 'vinyl-source-stream';
 
-gulp.task('default', ['build', 'server', 'watch']);
+gulp.task('default', ['build', 'watch']);
 gulp.task('build', ['build:css', 'build:html', 'build:images', 'build:js']);
 
 gulp.task('build:css', () => {
@@ -24,7 +24,7 @@ gulp.task('build:images', () => {
 });
 
 gulp.task('build:js', () => {
-  ['index.js', 'calendar.js', 'stocks.js', 'chat.js'].forEach((file) => {
+  ['chat.js'].forEach((file) => {
     const b = browserify({
       debug: process.env.NODE_ENV !== 'production',
       insertGlobals: true
@@ -37,11 +37,11 @@ gulp.task('build:js', () => {
       .pipe(gulp.dest('dist/js/'));
   });
 });
-
+/*
 gulp.task('server', () => {
   const port = process.env.PORT || 3000;
   server.listen(port, () => console.log(`server listening at port ${port}`));
-});
+});*/
 
 gulp.task('watch', () => {
   gulp.watch('app/**/*', ['build']);
