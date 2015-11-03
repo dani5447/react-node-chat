@@ -26,8 +26,8 @@ export default class Chat extends React.Component {
         var randomUserID = Math.floor(Math.random()*(5-1+1)+1);
         console.log("user has id " + randomUserID);
         
-        document.cookie="username="+"User"+randomUserID;
-        document.cookie="userPictureSrc="+"../../images/user"+randomUserID +".png";
+        that.username = "User"+randomUserID;
+        that.userPictureSrc="../../images/user"+randomUserID +".png";
     }
     
     componentDidMount() {
@@ -72,6 +72,14 @@ export default class Chat extends React.Component {
         return "";
     }
     
+    getRandomUserValues(cname){
+        if(cname=="username"){
+            return that.username;
+        } else{
+            return that.userPictureSrc;   
+        }
+    }
+    
 	postIt(e) {
         // prevent form submission which reloads the page
 		e.preventDefault();
@@ -80,9 +88,9 @@ export default class Chat extends React.Component {
 		var input = document.getElementById('message-input');
 		var message = {
 			timeStamp: Date.now(),
-            user: that.getCookieValue("username"),
+            user: that.getRandomUserValues("username"), //Replace with getCookieValue in actual usage
 			text: input.value, 
-            userImgSrc: that.getCookieValue("userPictureSrc"),
+            userImgSrc: that.getRandomUserValues("userPictureSrc"), //Replace with getCookieValue in actual usage
             received: false
 		};
  
