@@ -17,7 +17,18 @@ export default class Chat extends React.Component {
             }]
         }
         that = this;
+        
+        this.assignRandomUserInfo();
       }
+    
+    assignRandomUserInfo(){
+        //Random user number between 1 and 5 inclusive
+        var randomUserID = Math.floor(Math.random()*(5-1+1)+1);
+        console.log("user has id " + randomUserID);
+        
+        document.cookie="username="+"User"+randomUserID;
+        document.cookie="userPictureSrc="+"../../images/user"+randomUserID +".png";
+    }
     
     componentDidMount() {
         // register event handler for new messages received from server
