@@ -1,6 +1,9 @@
 # react-node-chat
 A sample chat application communicating over websockets and using react components.
 
+
+![Demo](https://github.com/dani5447/react-node-chat/blob/master/react-node-chat-demo.gif)
+
 ## Tech Stack
 * Node.js backend
 * Express for enhanced node web app features
