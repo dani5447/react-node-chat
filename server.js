@@ -26,3 +26,4 @@ io.on('connection', function(socket){
 })
 
 chatServer.listen(8080);
+console.log("Server listening at port 8080");
