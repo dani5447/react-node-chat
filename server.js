@@ -5,7 +5,7 @@ import http from 'http';
 
 const server = express();
 
-server.use(express.static(__dirname + '/app'));
+server.use(express.static(__dirname + '/dist'));
 server.get('/', function (req, res) {
     res.redirect('/index.html');
 });
