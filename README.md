@@ -1,7 +1,6 @@
 # react-node-chat
 A sample chat application communicating over websockets and using react components.
 
-
 ![Demo](https://github.com/dani5447/react-node-chat/blob/master/react-node-chat-demo.gif)
 
 ## Tech Stack
@@ -15,7 +14,8 @@ A sample chat application communicating over websockets and using react componen
 * Clone the repository locally
 * Run `npm install`
 * Run `npm start`
-* Navigate to http://localhost:8080/index.html
+* Navigate to http://localhost:8080/index.html on two different tabs and refresh each to generate random new user IDs
+* Chat with yourself!
 
 ## Usage/Modifiability
 The component was designed with a React/Node stack in mind.
