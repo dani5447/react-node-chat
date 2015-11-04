@@ -3,6 +3,8 @@ A sample chat application communicating over websockets and using react componen
 
 ![Demo](https://github.com/dani5447/react-node-chat/blob/master/react-node-chat-demo.gif)
 
+Design based off of http://bootsnipp.com/snippets/featured/like-hangout-chat
+
 ## Tech Stack
 * Node.js backend
 * Express for enhanced node web app features
